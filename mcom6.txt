@@ -1,0 +1,29 @@
+clc
+clear all;
+close all;
+ad=1
+biad=2*ad-1
+bd=0
+bibd=2*bd-1
+
+codeA=[0 0 1 1 0 0 1 1]
+codeB=[0 1 1 0 0 1 1 0]
+bicodeA=2*codeA-1
+bicodeB=2*codeB-1
+as=biad.*bicodeA
+bs=bibd.*bicodeB
+cs=as+bs
+ra=cs.*bicodeA
+rb=cs.*bicodeB
+sl=sum(ra)
+if s1>0
+	disp('sender A transmitted data 1')
+else
+	disp('sender A transmitted data 0')
+end
+s2=sum(rb)
+if s2>0
+	disp('sender B transmitted data 1')
+else
+	disp('sender B transmitted data 0')
+end

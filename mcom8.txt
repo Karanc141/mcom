@@ -1,0 +1,16 @@
+V=input(‘velocity=’)
+F=60*10^6
+Lambda=3*10^8/f
+fd=v/lambda
+bd=2*fd
+tc=0.423/fd
+
+ts=input(‘Ts=’)
+tc=input(‘Tc=’)
+bs=input(‘Bs=’)
+bd=input(‘Bd=’)
+if ts&gt;tc &amp;&amp; bs&lt;bd
+disp(‘It is fast fading’)
+else
+disp(‘It is slow fading’)
+end

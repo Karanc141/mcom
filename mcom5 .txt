@@ -1,0 +1,19 @@
+clc
+clear all
+close all
+do=100:
+po=0.01;
+pt=50;
+plofdo=10.*log10(po);
+for n=2:0.5:4;
+	for d= 100:50:2000;
+	    p1=plofdo+10.*n.*log10(d./do)
+	    pt=10*log10(50);
+	    pr=pt-p1
+            hold on
+	    disp(pr)
+	    plot(d,pr,'o')
+	    xlabel('Distance (m)');
+	    ylabel('pr (watts)');
+	end
+end

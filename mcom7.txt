@@ -1,0 +1,13 @@
+clc
+clear all;
+close all;
+code_length=input('enter length of code')
+code=[-1, -1;-1, +1]
+%generating a walshe code
+[r1 c1]=size(code)
+disp('walshe code generated')
+while r1<code_length
+	code=[code, code; code, -1*code]
+	[r1 c1]=size(code)
+	disp(code)
+end

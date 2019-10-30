@@ -1,16 +1,24 @@
-V=input(‘velocity=’)
-F=60*10^6
-Lambda=3*10^8/f
-fd=v/lambda
-bd=2*fd
+clc;
+clear all;
+close all;
+V= input('velocity') %20
+F= input('frequency') %6*10^7
+
+lmba=3*10^8/F
+fd=V/lmba
+Bd=2*fd
+
 tc=0.423/fd
 
-ts=input(‘Ts=’)
-tc=input(‘Tc=’)
-bs=input(‘Bs=’)
-bd=input(‘Bd=’)
-if ts&gt;tc &amp;&amp; bs&lt;bd
-disp(‘It is fast fading’)
-else
-disp(‘It is slow fading’)
+Ts=input('Enter Symbol period') %1e-3(slow)   %10^6
+Bs=input("Enter Signal BW") %10 %10^-3
+Ts=Ts*(10^-6);
+Bs=Bs*(10^3);
+
+if Bd>Bs && Ts>Tc
+    disp("Fast Fading")
+    
+else 
+    disp("Slow Fading")
+    
 end

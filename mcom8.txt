@@ -8,7 +8,7 @@ lmba=3*10^8/F
 fd=V/lmba
 Bd=2*fd
 
-tc=0.423/fd
+Tc=0.423/fd
 
 Ts=input('Enter Symbol period') %1e-3(slow)   %10^6
 Bs=input("Enter Signal BW") %10 %10^-3
